@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   devise_for :users
+=======
+>>>>>>> 5906d0026bbb000df69573501569f2109d4e9e0c
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
