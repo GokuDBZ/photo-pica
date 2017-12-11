@@ -11,14 +11,11 @@
           
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
-              <li><%= link_to "My Portfolio", my_portfolio_path  %></li>
-              <li><%= link_to "My Profile", edit_registration_path(current_user)  %></li>
-              <li><%= link_to "My Friends", my_friends_path  %></li>
             </ul>
             <ul class="navbar navbar-right col-md-4">
               <li class="user-name col-md-8 text-right">
                 <i class="fa fa-user"></i>
-                <%=  current_user.user_name.present? ?   current_user.user_name : current_user.email.truncate(10)%>
+                <%=  current_user.email.truncate(10)%>
                </li>
                <li class="logout col-md-4">
                  <%= link_to "Logout", destroy_user_session_path, class:"btn btn-xs btn-danger"%>
