@@ -18,7 +18,7 @@
                 <%=  current_user.email.truncate(10)%>
                </li>
                <li class="logout col-md-4">
-                 <%= link_to "Logout", destroy_user_session_path, class:"btn btn-xs btn-danger"%>
+                 <%= link_to "Logout", destroy_user_session_path, class:"btn btn-xs btn-danger", method: :delete%>
                  </li>
             </ul>
           </div>
