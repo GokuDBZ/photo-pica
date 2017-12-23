@@ -24,7 +24,6 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-    byebug
     @image = Image.new(image_params)
     @image.user = current_user
 
