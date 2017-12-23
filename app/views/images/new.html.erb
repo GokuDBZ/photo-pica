@@ -1,0 +1,18 @@
+<%- model_class = Image -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>
+
+<script type="text/javascript">
+   function _handleChange(event){
+        debugger
+        // this will return the tag
+        // 
+        const file = this.files[0]
+        if (file.size/1024/1024 > 5){
+            alert("File size cannot be greater than 5 MB")
+        }
+    }
+    $("#image_picture").on("change",_handleChange);
+</script>
